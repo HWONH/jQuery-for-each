@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#ex_01{width: 1200px;margin: 0 auto;padding: 20px 0;background: #cccccc;}
+#ex_01 #t_01{text-align: center;}
+#ex_01 #t_01 .cover{font-size: 0;}
+#ex_01 #t_01 .cover .box{display: inline-block;vertical-align: middle;width: calc(25% - 20px);margin: 0 10px 20px;padding: 20px;box-shadow: 0 0 4px #aaa;}
+#ex_01 #t_01 .cover .box .img_box{height: 200px;margin-bottom: 20px;background-size: cover;background-position: 50%;}
+#ex_01 #t_01 .cover .box h4{font-size: 22px;color: #555555;}
+#ex_01 #t_01 button{padding:10px 20px;border-radius:4px;border:none;background:#222;color:#fff;font-size:17px;cursor:pointer;}
