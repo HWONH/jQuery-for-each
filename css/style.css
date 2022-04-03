@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.frame{width: 1000px;padding: 20px 0;margin: 0 auto;background: #ededed;font-size: 0;}
+.frame .cont{display: inline-block;width: calc(25% - 30px);margin: 0 15px;padding: 10px;border: 1px solid #999;border-radius: 8px;}
+.frame .cont .cont_img{height: 240px;background-size: cover;background-position: 50%;}
+.frame .cont h3{padding-top: 20px;font-size: 20px;color: #888888;}
