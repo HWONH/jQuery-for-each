@@ -85,4 +85,40 @@ $(document).ready(function(){
             $(this).closest(".top").siblings(".bottom").stop().slideUp();
         }
     });
+
+    var $arr_03 = [
+		["pop-01.jpg", "독일 호수 체험"],
+		["pop-02.jpg", "파리 자유 여행"],
+		["pop-03.jpg", "런던 도심지 여행"],
+		["pop-04.jpg", "그리스 지중해 체험"]
+    ];
+    
+    var $box_03=`
+        <div class="box">
+            <div class="img_box"></div>
+            <h4>여행지</h4>
+        </div>
+    `;
+
+    for(i=0;i<$arr_02.length;i++){
+        $("#ex_03 .cover_03").append($box_03);
+    }
+
+    $("#ex_03 .cover_03 .box").each(function(index){
+        $(this).find(".img_box").css("background-image", "url(img/"+$arr_03[index][0]+")");
+        $(this).find("h4").text($arr_03[index][1]);
+    });
+
+    $("#ex_03 .cover_03 .box").click(function(){
+        var $index=$(this).index();
+        $("#ex_03 .dark, #ex_03 .popup").addClass("active");
+        $("#ex_03 .popup").find(".popup_img").css("background-image", "url(img/"+$arr_03[$index][0]+")")
+        $("#ex_03 .popup").find("h3").text($arr_03[$index][1]);
+        $("body").addClass("fix");
+    });
+    
+    $("#ex_03 .dark, #ex_03 .popup .close").click(function(){
+        $("#ex_03 .dark, #ex_03 .popup").removeClass("active");
+        $("body").removeClass("fix");
+    });
 });

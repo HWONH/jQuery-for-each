@@ -17,3 +17,16 @@
 #ex_02 article .box .top span{float: right;font-size: 20px;line-height: 1;font-weight: bold;color: #000000;width: 24px;height: 24px;text-align: center;background: #ffffff;border-radius: 50%;cursor: pointer;}
 #ex_02 article .box .bottom{display: none;padding: 20px;background: #222222;color: #ffffff;font-size: 17px;}
 #ex_02 article .box .bottom p{color: #ffffff;}
+
+#ex_03{}
+#ex_03 .cover_03{width: 1200px;margin: 0 auto;background: #cccccc;font-size: 0;}
+#ex_03 .cover_03 .box{display: inline-block;vertical-align: middle;width: calc(25% - 20px);margin: 0 10px 20px;padding: 20px;box-shadow: 0 0 4px #aaa;}
+#ex_03 .cover_03 .box .img_box{height: 200px;margin-bottom: 20px;background-size: cover;background-position: 50%;}
+#ex_03 .cover_03 .box h4{font-size: 22px;color: #555555;}
+#ex_03 .dark{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);z-index: -1;opacity: 0;transition: opacity 0.5s;}
+#ex_03 .dark.active{z-index: 1;opacity: 1;}
+#ex_03 .popup{position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 800px;padding: 20px;background: #ffffff;z-index: -1;opacity: 0;transition: opacity 0.5s;}
+#ex_03 .popup.active{z-index: 1;opacity: 1;}
+#ex_03 .popup .close{position: absolute;top: -40px;right: -36px;font-size: 32px;color: #ffffff;font-weight: bold;cursor: pointer;}
+#ex_03 .popup .popup_img{height: 300px;background-size: cover;background-position: 50%;}
+#ex_03 .popup h3{padding-top: 20px;font-size: 19px;color: #555555;}
