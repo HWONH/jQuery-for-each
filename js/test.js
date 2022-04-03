@@ -121,4 +121,30 @@ $(document).ready(function(){
         $("#ex_03 .dark, #ex_03 .popup").removeClass("active");
         $("body").removeClass("fix");
     });
+
+    setInterval(function(){
+        var $pause=$("#ex_04 .slider_cover").hasClass(".pause");
+        if($pause==true){
+            
+        }else{
+            var $f_child=$("#ex_04 .slider_cover ul li").first();
+            $("#ex_04 .slider_cover ul").stop().animate({"margin-left":"-100%"},500,function(){
+                $("#ex_04 .slider_cover ul").append($f_child).css("margin-left", "0");
+                var $rel=$("#ex_04 .slider_cover ul li").eq(0).attr("rel");
+                /* 콜백 함수 내에 선언하면, eq(0) : append로 첫번째 자식을 뒤로 보내버렸기 때문에 좌측으로 슬라이드가 존재하지 않는다*/
+                $("#ex_04 ol li").removeClass("active");
+                $("#ex_04 ol li").eq($rel).addClass("active");
+            });
+            /* 콜백 함수 밖에 선언하면, eq(1) : animate와 동시 진행되어 좌측으로 하나의 슬라이드가 존재한다 현재 콜백 함수는 진행되지 않은 상태! */
+            // var $rel=$("#ex_04 .slider_cover ul li").eq(1).attr("rel");
+            // $("#ex_04 ol li").removeClass("active");
+            // $("#ex_04 ol li").eq($rel).addClass("active");
+        }
+    },2500);
+
+    $("#ex_04 .slider_cover").hover(function(){
+        $(this).addClass(".pause")
+    }, function(){
+        $(this).removeClass(".pause")
+    });
 });
